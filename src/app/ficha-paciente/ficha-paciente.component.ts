@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
-import { PacienteDTO } from 'src/models/DTO/Paciente.dto';
+import { PacienteServiceService } from './../paciente-service.service';
+import { PacienteDTO } from './../../models/DTO/Paciente.dto';
+import { Component, OnInit } from '@angular/core';
 import { Medicamento } from 'src/models/Medicamento';
 import { Doenca } from 'src/models/Doenca';
 import { Alergia } from 'src/models/Alergia';
 import { ContatosDeEmergencia } from 'src/models/ContatosDeEmergencia';
-import { PacienteServiceService } from './paciente-service.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-ficha-paciente',
+  templateUrl: './ficha-paciente.component.html',
+  styleUrls: ['./ficha-paciente.component.css']
 })
-export class AppComponent {
+export class FichaPacienteComponent implements OnInit {
+
   public fichaPaciente : PacienteDTO;
 
   public medicamentos: Medicamento[];
@@ -50,6 +51,4 @@ export class AppComponent {
 }
   
 }
-
-
 
